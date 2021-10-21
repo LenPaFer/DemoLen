@@ -4,36 +4,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
  
-  <groupId>com.simpligility.training</groupId>
-  <artifactId>ossrh-demo</artifactId>
-  <version>1.0</version>
-  <packaging>jar</packaging>
-
-  <name>DemoLeny</name>
-  <description>A demo for deployment to the Central Repository via OSSRH</description>
-  <url>https://github.com/LenPaFer/DemoLen</url>
-
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
+  <groupId>io.github.LenPaFer</groupId>
+  <artifactId>DemoLen</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   
-  <developers>
-    <developer>
-      <name>Leny Palacios</name>
-      <email>ileny.palacios@gruposhift-f6.com.mx</email>
-      <organization>Shift F6</organization>
-    </developer>
-  </developers>
-
-  <scm>
-    <connection>scm:git:git://github.com/LenPaFer/DemoLen.git</connection>
-    <developerConnection>scm:git:ssh://github.com/LenPaFer/DemoLen.git</developerConnection>
-    <url>https://github.com/LenPaFer/DemoLen/tree/master</url>
-   </scm>
-   
 <build>
   <plugins>
     <plugin>
@@ -69,24 +43,47 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <extensions>true</extensions>
     <configuration>
        <serverId>ossrh</serverId>
-       <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+       <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
        <autoReleaseAfterClose>true</autoReleaseAfterClose>
     </configuration>
   </plugin>
   </plugins>
 </build>
+
+ <name>DemoLeny</name>
+  <description>A demo for deployment to the Central Repository via OSSRH</description>
+  <url>https://github.com/LenPaFer/DemoLen</url>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
   
-  <distributionManagement>
-  <snapshotRepository>
-    <id>ossrh</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-  </snapshotRepository>
-  <repository>
+    <distributionManagement>
+  		<snapshotRepository>
+    	<id>ossrh</id>
+   		<url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+  		</snapshotRepository>
+  	<repository>
     <id>ossrh</id>
     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
   </repository>
 </distributionManagement>
+  
+  <developers>
+    <developer>
+      <name>Leny Palacios</name>
+      <email>ileny.palacios@gruposhift-f6.com.mx</email>
+      <organization>Shift F6</organization>
+    </developer>
+  </developers>
 
-
+  <scm>
+    <connection>scm:git:git://github.com/LenPaFer/DemoLen.git</connection>
+    <developerConnection>scm:git:ssh://github.com/LenPaFer/DemoLen.git</developerConnection>
+    <url>https://github.com/LenPaFer/DemoLen</url>
+   </scm>
    
   </project>
